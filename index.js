@@ -1,7 +1,7 @@
 const fs = require("fs");
-const axios = require("axios");
 const inquirer = require("inquirer");
 const api = require("./utils/api");
+const gen = require("./utils/generateMarkdown")
 
 const questions = [
   {
@@ -46,22 +46,19 @@ const questions = [
   },
 ];
 
-function appendToFile(fileName, data) {
-  return fs.writeFileSync(path.join(process.cwd(),fileName),data);
-}
-
 function init() {
   inquirer
     .prompt(questions)
     .then((inquirerResponses) => {
       console.log("Loading...");
-      console.log(inquirerResponses);
+
+      api.getUser(inquirerResponses.username);
       
-      api
-      .getuser(inquirerResponses.username)
-        .then(function ({ data }) {
-          appendToFile("readme.md", data);
-        })
+      fs.appendFile("user-read-me.md", gen(inquirerResponses), (err) => {
+        if (err) throw err;
+      });
+
+      console.log("Read Me file created!");
     });
 }
 
