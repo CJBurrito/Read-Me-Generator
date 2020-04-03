@@ -54,7 +54,7 @@ function init() {
 
       api.getUser(inquirerResponses.username);
       
-      fs.appendFile("user-read-me.md", gen(inquirerResponses), (err) => {
+      fs.appendFile("user-README.md", gen(inquirerResponses), (err) => {
         if (err) throw err;
       });
 

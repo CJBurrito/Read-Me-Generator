@@ -10,7 +10,7 @@ const api = {
       let userInfo = "User Name: " + res.data.login + "\n" + 
         res.data.avatar_url + ".png" + "\n" + "User Email: " + res.data.email;
 
-      fs.appendFile("user-read-me.md", "User Info: \n" + userInfo + "\n", (err) => {
+      fs.appendFile("user-README.md", "User Info: \n" + userInfo + "\n", (err) => {
         if (err) throw err;
       });
     })
