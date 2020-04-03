@@ -1,16 +1,16 @@
 
-# Test Title
-Desc
+# ReadMe Generator
+A simple CLI prompt to help the user create a ReadMe for a GitHub repository.
 ## Installing
-Inst
+Simply clone the repo to your machine, open the CLI, run "npm i" to install axios and inquirer, then "node index.js". You will then be prompted to provide info for your repo.
 ## Use Case
-Use this please
+Useful for quick creation of a repo ReadMe, or as a good starting point for a more complicated application.
 ## License
-Don't steal it's bad.
+Application makes use of Node.js, npm inquirer.js, and npm axios.js.
 ## Contributing
-You can't change my work
+Application is not open for contributions.
 ## Testing
-Not App.
+No testing available.
 
 User Info: 
 User Name: CJBurrito
