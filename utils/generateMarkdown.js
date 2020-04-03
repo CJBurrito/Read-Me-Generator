@@ -2,15 +2,15 @@ function generateMarkdown(data) {
   return `
 # ${data.title}
 ${data.description}
-# Installing
+## Installing
 ${data.installation}
-# Use Case
+## Use Case
 ${data.usage}
-# License
+## License
 ${data.lisence}
-# Contributing
+## Contributing
 ${data.contributing}
-# Testing
+## Testing
 ${data.tests}
 
 `;
